@@ -50,3 +50,54 @@ create table cartas (
 	primary key (id)
 );
 
+create table tablero (
+	id int not null,
+	sentido_horario boolean not null,
+	turno int not null,
+	ultimo_descarte int,
+	foreign key (ultimo_descarte) references cartas(id),
+	primary key (id)
+);
+
+create table mazo (
+	id_tablero int not null,
+	id_carta int not null,
+	foreign key (id_tablero) references tablero(id),
+	foreign key (id_carta) references cartas(id),
+	primary key (id_tablero, id_carta)
+);
+
+create table mano (
+	id_tablero int not null,
+	id_carta int not null,
+	username varchar(50) not null,
+	foreign key (id_tablero) references tablero(id),
+	foreign key (id_carta) references cartas(id),
+	foreign key (username) references usuarios(username),
+	primary key (id_tablero, id_carta, username)
+);
+
+create table juega (
+	username varchar(50) not null,
+	id_tablero int not null,
+	num_jugador int not null,
+	foreign key (username) references usuarios(username),
+	foreign key (id_tablero) references tablero(id),
+	primary key (username, id_tablero)
+);
+
+create table partida_finalizada (
+	id int not null,
+	fecha date not null,
+	primary key (id)
+);
+
+create table jugado (
+	username varchar(50) not null,
+	id_partida int not null,
+	es_ganador boolean not null,
+	foreign key (username) references usuarios(username),
+	foreign key (id_partida) references partida_finalizada(id),
+	primary key (username, id_partida)
+);
+

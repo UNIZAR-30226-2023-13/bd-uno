@@ -3,7 +3,7 @@ version: '3.3'
 services:
   db:
     image: mysql
-    container_name: db
+    container_name: db-uno
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: uno_db
@@ -11,5 +11,6 @@ services:
       - "3306:3306"
     volumes:
       - dbdata:/var/lib/mysql
+      - ./create-tables.sql:/docker-entrypoint-initdb.d/init.sql
 volumes:
   dbdata:

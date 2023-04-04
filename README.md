@@ -12,3 +12,5 @@ docker-compose down
 Para crear la conexion, hay que cambiar en la seccion de Driver properties allowPublicKeyRetrieval a TRUE
 
 Ademas en este repositorio hay una carpeta con un fichero sql que permite hacer un poblado de prueba (añade vario usarios, aspectos, amigos)
+
+En este ejemplo la contraseña de todos los usuarios que veis esta hasheada, es "juan" (por si os viene bien para hacer pruebas)

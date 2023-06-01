@@ -11,9 +11,9 @@ INSERT INTO uno_db.usuarios (username,password,email,puntos,tablero_en_uso,aspec
 	 ('ismael','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','isma@gmail.com',10,'Original','Original'),
 	 ('javier','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','javi@gmail.com',50,'Original','Original'),
 	 ('juan','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','juan@gmail.com',100,'Original','Original'),
-	 ('paquito','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','paquito@gmail.com',100,'Original','Original');
-	 ('claudia','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','paquito@gmail.com',100,'Original','Original');
-	 ('lucia','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','paquito@gmail.com',100,'Original','Original');
+	 ('paquito','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','paquito@gmail.com',100,'Original','Original'),
+	 ('claudia','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','paquito@gmail.com',100,'Original','Original'),
+	 ('lucia','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','paquito@gmail.com',100,'Original','Original'),
 	 ('madalena','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','paquito@gmail.com',100,'Original','Original');
 INSERT INTO uno_db.amigos (username,amigo) VALUES
 	 ('juan','adrian'),
@@ -24,8 +24,8 @@ INSERT INTO uno_db.amigos (username,amigo) VALUES
 	 ('javier','ismael'),
 	 ('lucia', 'madalena'),
 	 ('lucia', 'claudia'),
-	 ('claudia', 'madalena'),
+	 ('claudia', 'madalena');
 INSERT INTO uno_db.solicitudes_amistad (username,amigo) VALUES
-	 ('madalena','adrian');
-	 ('javier','adrian');
+	 ('madalena','adrian'),
+	 ('javier','adrian'),
 	 ('ismael','adrian');

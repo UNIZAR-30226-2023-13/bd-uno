@@ -1,5 +1,3 @@
---
-
 create table tableros (
 	nombre varchar(50) not null,
 	ruta varchar(200) not null,
@@ -29,16 +27,16 @@ create table usuarios (
 create table solicitudes_amistad (
 	username varchar(50) not null,
 	amigo varchar(50) not null,
-	foreign key (username) references usuarios(username),
-	foreign key (amigo) references usuarios(username),
+	foreign key (username) references usuarios(username) ON DELETE CASCADE,
+	foreign key (amigo) references usuarios(username) ON DELETE CASCADE,
 	primary key (username, amigo)
 );
 
 create table amigos (
 	username varchar(50) not null,
 	amigo varchar(50) not null,
-	foreign key (username) references usuarios(username),
-	foreign key (amigo) references usuarios(username),
+	foreign key (username) references usuarios(username) ON DELETE CASCADE,
+	foreign key (amigo) references usuarios(username) ON DELETE CASCADE,
 	primary key (username, amigo)
 );
 
@@ -96,7 +94,7 @@ create table jugado (
 	username varchar(50) not null,
 	id_partida int not null,
 	es_ganador boolean not null,
-	foreign key (username) references usuarios(username),
+	foreign key (username) references usuarios(username) ON DELETE CASCADE,
 	foreign key (id_partida) references partida_finalizada(id),
 	primary key (username, id_partida)
 );

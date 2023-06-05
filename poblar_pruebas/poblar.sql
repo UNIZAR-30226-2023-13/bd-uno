@@ -17,9 +17,9 @@ INSERT INTO uno_db.usuarios (username,password,email,puntos,tablero_en_uso,aspec
 	 ('madalena','$2a$10$6FPmRWnVdLVTYu4HO..r0OMN4VZs2mMBTcMYS2Qp4xVUX.4sk7MvO','paquito@gmail.com',100,'Original','Original');
 INSERT INTO uno_db.amigos (username,amigo) VALUES
 	 ('juan','adrian'),
-	 ('juan','cluadia'),
+	 ('juan','claudia'),
 	 ('juan','lucia'),
-	 ('adrian','cluadia'),
+	 ('adrian','claudia'),
 	 ('adrian','lucia'),
 	 ('javier','ismael'),
 	 ('lucia', 'madalena'),

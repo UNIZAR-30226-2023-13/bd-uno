@@ -85,7 +85,7 @@ create table juega (
 );
 
 create table partida_finalizada (
-	id int not null,
+	id int not null AUTO_INCREMENT,
 	fecha date not null,
 	primary key (id)
 );
